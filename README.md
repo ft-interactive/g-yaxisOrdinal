@@ -1,17 +1,39 @@
 # yaxisOrdinal
 
-Pre styled and positioned linear y-axis for use with the FT's g-chartframe architecture as part of the Visual Vocabulary. As the name suggests it creates a linear y-axis that can be appended to the .plot obejct in the g-chartframe hopefully eliminating the need to code another standard y-axis.
+Pre styled ordinal y-axis for use with the FT's g-chartframe architecture as part of the Visual Vocabulary. As the name suggests it creates an ordinal y-axis that can be appended to the .plot obejct in the g-chartframe hopefully eliminating the need to code another standard y-axis.
 
 Will also work with other builds where the axis is called into an svg.
 
+
+
+### Prerequisites
+The FT axis styles---add the folowwing link in your index file header
+
+The [d3 library](https://d3js.org/) is already installed in the build
+
 ## Installing
+### Manually install
 
-If you use NPM, `npm install d3-foo`. Otherwise, download the [latest release](https://github.com/d3/d3-foo/releases/latest).
+Add the following line to the header of you index.html file.
 
-## API Reference
+``` html
+<script src="https://rawgit.com/ft-interactive/g-yaxisOrdinal/master/build/g-yaxisOrdinal.js"> </script>
 
-YOUR API DOCUMENTATION HERE. Use bold for symbols (such as constructor and method names) and italics for instances. See the other D3 modules for examples.
+```
 
-<a href="#foo" name="foo">#</a> <b>foo</b>()
 
-Computes the answer to the ultimate question of life, the universe, and everything.
+### NPM install
+Not yet deployed
+
+## Getting started
+Add the following code to your index.js to append a default y-axis to the .plot object (grey here but is not normally visible)
+
+```
+let myAxis = gAxis.yaxisLinear;
+currentFrame.plot()
+	.call(myYAxis);
+```
+
+![alt tag](https://github.com/ft-interactive/g-yaxislinear/blob/master/images/initialPlot.png)
+
+Set the <b>.range()</b> and the <b>.ticksize()</b> to the dimensions of the current frame
