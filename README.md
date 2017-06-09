@@ -5,7 +5,6 @@ Pre styled ordinal y-axis for use with the FT's g-chartframe architecture as par
 Will also work with other builds where the axis is called into an svg.
 
 
-
 ### Prerequisites
 The FT axis styles---add the folowwing link in your index file header
 
