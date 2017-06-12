@@ -25,14 +25,25 @@ Add the following line to the header of you index.html file.
 Not yet deployed
 
 ## Getting started
-Add the following code to your index.js to append a default y-axis to the .plot object (grey here but is not normally visible)
+Add the following code to your index.js to append a default y-axis to the .plot object (grey here but is not normally visible). Bye default there are no tick on an ordinal y-axis, these are set to zero
 
 ```
-const myYAxis = yaxisOrdinal()
+const myYAxis = gAxis.yaxisOrdinal()
 currentFrame.plot()
 	.call(myYAxis);
 ```
 
 ![alt tag](https://github.com/ft-interactive/g-yaxisOrdinal/blob/master/images/default.png)
 
-Set the <b>.range()</b> and the <b>.ticksize()</b> to the dimensions of the current frame
+Set the <b>.rangeRound()</b> to the current frams height to make the axis correctly fit in the <b>.plot</b> object.
+
+```
+const myYAxis = gAxis.yaxisOrdinal()
+currentFrame.plot()
+    .call(myYAxis)
+    .rangeRound([0, currentFrame.dimension().height]);
+```
+
+![alt tag](https://github.com/ft-interactive/g-yaxisOrdinal/blob/master/images/range.png)
+
+
