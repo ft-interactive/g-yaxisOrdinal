@@ -65,3 +65,15 @@ The rendered axis returns the width of the ticks text via <b>.labelWidth()</b>.
 
 ![alt tag](https://github.com/ft-interactive/g-yaxisOrdinal/blob/master/images/labelWidth.png)
 
+.labelWidth() is used to amend the margin of the current frame element so that tick text is positioned outside the <b>.plot()</b> area.
+
+```
+let newMargin = myYAxis.labelWidth()+currentFrame.margin().left;
+currentFrame.margin({left:newMargin});
+d3.select(currentFrame.plot().node().parentNode)
+    .call(currentFrame);
+```
+
+![alt tag](https://github.com/ft-interactive/g-yaxisOrdinal/blob/master/images/newWidth.png)
+
+The current frame can then still be used to correctly define the .range() values of an x-axis. If ticks are aligned to the right then the right hand margin should be ammended instaed of the left
