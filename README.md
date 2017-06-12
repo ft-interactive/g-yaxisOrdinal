@@ -112,7 +112,7 @@ d3.select(currentFrame.plot().node().parentNode)
 .call(currentFrame);
 ```
 
-[alt tag](https://github.com/ft-interactive/g-yaxisOrdinal/blob/master/images/rightHand.png)
+![alt tag](https://github.com/ft-interactive/g-yaxisOrdinal/blob/master/images/rightHand.png)
 
 
 
