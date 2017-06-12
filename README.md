@@ -60,7 +60,7 @@ currentFrame.plot()
 
 ![alt tag](https://github.com/ft-interactive/g-yaxisOrdinal/blob/master/images/domain.png)
 
-### Positioning
+## Positioning
 The rendered axis returns the width of the ticks text via <b>.labelWidth()</b>.
 
 ![alt tag](https://github.com/ft-interactive/g-yaxisOrdinal/blob/master/images/labelWidth.png)
@@ -78,7 +78,7 @@ d3.select(currentFrame.plot().node().parentNode)
 
 The current frame can then still be used to correctly define the .range() values of an x-axis. If ticks are aligned to the right then the right hand margin should be ammended instaed of the left
 
-### API reference
+## API reference
 
 #myAxis.align([String]) "right" or "left". Determines the alignment of the tick text set as "right" by default
 
@@ -92,9 +92,9 @@ The current frame can then still be used to correctly define the .range() values
 
 #myAxis<b>.offset([Number])</b> The distance from the axis is positioned from the left size of the <b>/plot()</b> container. As most ordinal scales are aligned to the left this is set to zero by default, but should be set to the width of the <b>.plot()</b> object if the tick labels are to align right (see examples).
 
-### Examples
+## Examples
 
-## Right hand axis
+### Right hand axis
 
 ```
  myYAxis
