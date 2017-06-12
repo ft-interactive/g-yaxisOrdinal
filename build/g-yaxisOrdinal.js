@@ -30,16 +30,14 @@
                 })
 
             //position label on right hand axis
-            if(tickAlign=="right") {
-                yLabel.selectAll("text")
-                .attr("dx",labelWidth)
+            if (tickAlign=="left") {
+                yLabel.attr("transform","translate("+(labelWidth )+","+0+")")
             }
             //translate if a right axis
             if (tickAlign=="right") {
                 yLabel.attr("transform","translate("+(offset-labelWidth )+","+0+")")
             }
             
-
         }
 
         axis.scale = (d)=>{
