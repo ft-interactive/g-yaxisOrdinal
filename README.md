@@ -28,11 +28,11 @@ Not yet deployed
 Add the following code to your index.js to append a default y-axis to the .plot object (grey here but is not normally visible)
 
 ```
-let myAxis = gAxis.yaxisLinear;
+const myYAxis = yaxisOrdinal()
 currentFrame.plot()
 	.call(myYAxis);
 ```
 
-![alt tag](https://github.com/ft-interactive/g-yaxislinear/blob/master/images/initialPlot.png)
+![alt tag](https://github.com/ft-interactive/g-yaxisOrdinal/blob/master/images/default.png)
 
 Set the <b>.range()</b> and the <b>.ticksize()</b> to the dimensions of the current frame
