@@ -60,3 +60,8 @@ currentFrame.plot()
 
 ![alt tag](https://github.com/ft-interactive/g-yaxisOrdinal/blob/master/images/domain.png)
 
+### Positioning
+The rendered axis returns the width of the ticks text via <b>.labelWidth()</b>.
+
+![alt tag](https://github.com/ft-interactive/g-yaxisOrdinal/blob/master/images/labelWidth.png)
+
