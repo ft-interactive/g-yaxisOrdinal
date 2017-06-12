@@ -77,3 +77,21 @@ d3.select(currentFrame.plot().node().parentNode)
 ![alt tag](https://github.com/ft-interactive/g-yaxisOrdinal/blob/master/images/newWidth.png)
 
 The current frame can then still be used to correctly define the .range() values of an x-axis. If ticks are aligned to the right then the right hand margin should be ammended instaed of the left
+
+### API reference
+
+#myAxis.align([String]) "right" or "left". Determines the alignment of the tick text set as "right" by default
+
+#myAxis<b>.domain([Array])</b> defines the axis domain in the same way as you would when creating a normal d3.scaleOrdinal(). If no <b>.domain()</b> is defined the default is ["Oranges", "Lemons", "Apples", "Pears"]
+
+#myAxis<b>.rangeRound([Array])</b> defines the axis bands in the same way as you would when creating a normal d3.scaleOrdinal(), would usually be set to the height of the <b>.plot()</b> object. If no <b>.range()</b> is defined the default is [0, 220].
+
+#myAxis<b>.labelWidth([Number])</b> used to return the width of the text on the axis tick. Will vary depending on tick e.g. a label of 1,000,000 will be wider than a label of 10 and will return a higher value.
+
+#myAxis<b>.tickSize([Number])</b> Hardly ever used on an ordinal scale as usually no tck are required so set by default to zero.
+
+#myAxis<b>.offset([Number])</b> The distance from the axis is positioned from the left size of the <b>/plot()</b> container. As most ordinal scales are aligned to the left this is set to zero by default, but should be set to the width of the <b>.plot()</b> object if the tick labels are to align right (see examples).
+
+### Examples
+
+
