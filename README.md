@@ -25,6 +25,8 @@ Add the following line to the header of you index.html file.
 Not yet deployed
 
 ## Getting started
+<b>Note</b> All examples shown are from the web frame style
+
 Add the following code to your index.js to append a default y-axis to the .plot object (grey here but is not normally visible). Bye default there are no tick on an ordinal y-axis, these are set to zero
 
 ```
