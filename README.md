@@ -39,11 +39,24 @@ Set the <b>.rangeRound()</b> to the current frams height to make the axis correc
 
 ```
 const myYAxis = gAxis.yaxisOrdinal()
+    .rangeRound([0, currentFrame.dimension().height]);
+
 currentFrame.plot()
     .call(myYAxis)
-    .rangeRound([0, currentFrame.dimension().height]);
 ```
 
 ![alt tag](https://github.com/ft-interactive/g-yaxisOrdinal/blob/master/images/range.png)
 
+Specify your the <b>.domain </b> in the same way that would in any other d3 axis
+
+```
+const myYAxis = gAxis.yaxisOrdinal()
+    .rangeRound([0, currentFrame.dimension().height])
+    .domain(myCatagories);
+    
+currentFrame.plot()
+    .call(myYAxis)
+```
+
+![alt tag](https://github.com/ft-interactive/g-yaxisOrdinal/blob/master/images/domain.png)
 
