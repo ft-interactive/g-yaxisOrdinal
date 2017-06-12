@@ -94,4 +94,23 @@ The current frame can then still be used to correctly define the .range() values
 
 ### Examples
 
+## Right hand axis
+
+```
+ myYAxis
+    .rangeRound([0, currentFrame.dimension().height])
+    .domain(myCatagories)
+    .tickAlign("right")
+    .offset(currentFrame.dimension().width);
+
+currentFrame.plot()
+    .call(myYAxis);
+
+let newMargin = myYAxis.labelWidth()+currentFrame.margin().left;
+currentFrame.margin({left:newMargin});
+d3.select(currentFrame.plot().node().parentNode)
+.call(currentFrame);
+```
+
+[alt tag](https://github.com/ft-interactive/g-yaxisOrdinal/blob/master/images/rightHand.png)
 
