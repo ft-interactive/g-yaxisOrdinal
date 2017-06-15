@@ -2,6 +2,8 @@
 
 Pre styled ordinal y-axis for use with the FT's g-chartframe architecture as part of the Visual Vocabulary. As the name suggests it creates an ordinal y-axis that can be appended to the .plot obejct in the g-chartframe hopefully eliminating the need to code another standard y-axis.
 
+A centralised axis component for easy maintenance of styles accross the full Visual Vocabulary. The axis component also appends the correct script tags for use with the FT Pre-Flight script in Adobe Illustrator.
+
 Will also work with other builds where the axis is called into an svg.
 
 
