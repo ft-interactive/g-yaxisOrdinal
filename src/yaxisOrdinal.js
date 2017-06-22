@@ -4,7 +4,7 @@ export default function() {
  	let tickAlign ="left"
     let scale = d3.scaleBand()
         .domain(["Oranges", "Lemons", "Apples", "Pears"])
-        .rangeRound([0, 220]);
+        .rangeRound([0, 220])
     let labelWidth = 0;
     let tickSize = 0;
     let offset = 0;
@@ -15,7 +15,7 @@ export default function() {
             .tickSize(tickSize)
             .scale(scale)
 
-        const yLabel = parent.append("g")
+        yLabel = parent.append("g")
             .attr("class","axis yAxis")
             .call(yAxis)
 
@@ -24,15 +24,6 @@ export default function() {
             function(){
                 labelWidth=Math.max(this.getBBox().width,labelWidth);
             })
-
-        //position label on right hand axis
-        if (tickAlign=="left") {
-            yLabel.attr("transform","translate("+(labelWidth )+","+0+")")
-        }
-        //translate if a right axis
-        if (tickAlign=="right") {
-            yLabel.attr("transform","translate("+(offset-labelWidth )+","+0+")")
-        }
         
     }
 
@@ -48,9 +39,18 @@ export default function() {
             scale.rangeRound(d);
             return axis;
         };
+        axis.bandwidth = (  d)=>{
+            scale.bandwidth(d);
+            return axis;
+        };
 
         axis.labelWidth = (d)=>{
             if(d===undefined) return labelWidth
+            labelWidth=d;
+            return axis;
+        }
+        axis.yLabel = (d)=>{
+            if(d===undefined) return yLabel
             labelWidth=d;
             return axis;
         }
